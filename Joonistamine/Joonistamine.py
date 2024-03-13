@@ -19,7 +19,7 @@ def chekbutton_select(event):
     v1=var1.get()
     v2=var2.get()
     jarjend=[v1,v2]
-    l.delete(0,1)
+    lb.delete(0,1)
     for item in jarjend:
         lb.insert(END,item)
     
@@ -27,7 +27,7 @@ def chekbutton_select(event):
 #окно 
 aken=Tk()
 #свойство (прописываются внутри скобок) и методы (что объект имеет делать)
-aken.geometry("600x400")
+aken.geometry("600x800")
 #заголовок 
 aken.title("Tkinteri kasutamine. See on pealkiri")
 aken.iconbitmap("icon.ico")
@@ -56,7 +56,7 @@ img2=PhotoImage(file="game.png")
 var1=StringVar()
 var2=StringVar()
 c1=Checkbutton(f_all,image=img1, variable=var1, onvalue="Paike paistab", offvalue="Paike ei paista")
-c2=Checkbutton(f_all,image=img2, variable=var1, onvalue="Sajab vihma", offvalue="Paike ei paista")
+c2=Checkbutton(f_all,image=img2, variable=var2,onvalue="Sajab vihma", offvalue="Paike ei paista")
 c1.deselect()
 c2.deselect()
 lb=Listbox(f_all, height=2, width=20)
